@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    background-color: #1d2d44;
+    color: #f0ebd8;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+li {
+    text-align: left;
+}
+
+.main {
+    padding: 1rem;
+}
+
+/* CHOICE IMAGES */
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    /* prevent stacking */
+    flex-direction: row;
+    /* overflow-x: auto; */
+    /* horizontal scroll if needed on very small screens */
+}
+
+.choice {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+    flex-shrink: 0;
+}
+
+.choice:hover {
+    opacity: 0.5;
+    background-color: #0d1321;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* SELECT BOXES */
+.selectBoxs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: nowrap;
+    /* stay in row */
+}
+
+.selectBox {
+    padding: 1rem;
+    border: solid 4px black;
+    font-size: 1.1rem;
+    min-width: 150px;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+#user {
+    background-color: #1d2d44;
+}
+
+#comp {
+    background-color: #748cab;
+}
+
+/* SCORE BOARD */
+.scoreBoard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    gap: 4rem;
+    flex-wrap: nowrap;
+}
+
+#userScore,
+#compScore {
+    font-size: 4rem;
+}
+
+/* MESSAGE BOX */
+.msgContainer {
+    margin-top: 2rem;
+}
+
+#msg {
+    display: inline-block;
+    background-color: #748cab;
+    color: #f0ebd8;
+    padding: 0.8rem 1.5rem;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+}
+
+/* MEDIA QUERY: fix font sizes only, keep layout horizontal */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .choice {
+        height: 90px;
+        width: 90px;
+    }
+
+    img {
+        height: 75px;
+        width: 75px;
+    }
+
+    .selectBox {
+        font-size: 0.9rem;
+        padding: 0.6rem;
+        min-width: 110px;
+    }
+
+    #userScore,
+    #compScore {
+        font-size: 3rem;
+    }
+
+    #msg {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .choices,
+    .selectBoxs,
+    .scoreBoard {
+        flex-wrap: nowrap;
+    }
+}
